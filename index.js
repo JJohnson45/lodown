@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /**
+=======
+
+ 
+ /**
+>>>>>>> de7ae27a1f28b38fb8801b2cf80daa90e99fa332
  Identity: Designed to return the value of the argurment placed in the parameter;
            Takes a value. and returns that value.
     *@Param: {value}
