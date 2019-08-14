@@ -5,8 +5,8 @@ function identity(value){
  
  /**
  tyepOf: Designed to return a string of the datatype. Takes one argument (value) that must pass.
-@param: {value} 
-return: {any datatype} returns a string epresenting a datatype of value.
+@param {value} value: 
+return: {any datatype}: returns a string epresenting a datatype of value.
  **/
  
   function typeOf( value) {
@@ -27,11 +27,11 @@ if (Array.isArray(value)){
 
  
  /**
- first: Designed to return the first element in an array
+ first: Designed to return the first number of elements in an array
     With edge case to test if an aray is an array.
-@param: {number}
-@param: {array}
-@return: {arr} return a new array
+@param: {Number} number: number of elements
+@param: {Array} array: array that is being looped through
+@return: {Array} return a new array
 **/
 
  function first (array, number){
@@ -53,11 +53,11 @@ if (Array.isArray(value)){
     
     
  /**
- last:  Designed to return the first element in an array
+ last:  Designed to return the last number of elements in an array
     With edge case to test if an aray is an array.
-@param: {number}
-@param: {array}
-@return: {arr} Returned a new array
+@param: {Number} number: number of elements
+@param: {Array} array: array that is being looped through
+@return: {Array} Returned a new array
 **/
  function last ( array, number){
     var arr = [];
@@ -82,9 +82,9 @@ if (Array.isArray(value)){
      module.exports.last = last;
      
  /**    
- indexOf: Designed to find the first occurence of a value, and return that value's index
- @param: {array}
- @param: {value}
+ indexOf: Designed to return the first occurence of a specific value in a string and return -1 if the value that is being searched is never found
+ @param: {array} array: array that is being looped through
+ @param: {value} value: any given value
  @return: {i, -1}: Return an index if that element equals to value
                    Return -1 if element is false;
  **/
@@ -103,8 +103,8 @@ function indexOf(array, value){
   contains: Designed to test if an array holds a value using a contenary operator.
             Uses the includes method to test if array includes value. 
             Uses the ternary operator to test whether true or false.
-  @param: {array}
-  @param: {value}
+  @param: {array} array: array that is being looped through
+  @param: {value} value: any given value
   @return: {true or false}: Return boolean if value is inside the array.
   **/
   
@@ -116,8 +116,8 @@ function contains(array, value){
     
   /**
   each: iterates through either an object or array and performs a function on every element, index, and collection.
-  @param:{collection}
-  @param:{funct}
+  @param:{collection} collection: an object or an array
+  @param:{funct} function: a set of statements that performs a task
   @return: Returns nothing
   **/
   
@@ -138,8 +138,8 @@ module.exports.each = each;
 
   /**
   unique: Returns a new array of all elements from {array} with duplicates removed using indexOf.
-  @param:{array}
-  @return:{arr} : Retruns an array of new values..
+  @param:{Array} array: array that is being looped through
+  @return:{Array} array: Retruns an array of new values..
   **/
   
   function unique(array){
@@ -156,8 +156,8 @@ module.exports.unique = unique;
 
  /**
  filter: Designed to run through an array and filter out all truthy values depending on callback
- @param: {array}
- @param: {funct}
+ @param: {Array} array: array that is being looped through
+ @param: {Funct} funct: function: a set of statements that performs a task
  @return:{arr}: returns an array of all truthy values that are filtered in the array.
  **/
  
@@ -174,9 +174,9 @@ module.exports.filter = filter;
 
  /**
  reject: Designed to run through an array and filter out all falsy values depending on callback
- @param:{array}
- @param:{funct}
- @return:{arr}: Returns an array of all falsy values that are fitlered in the array.
+ @param:{Array} array: array that is being looped through
+ @param:{Funct} funct: function: a set of statements that performs a task
+ @return:{Arr}: Returns an array of all falsy values that are fitlered in the array.
  **/
  
  function reject(array, funct){
@@ -193,8 +193,8 @@ module.exports.filter = filter;
    
  /**
  * partition: Returns an arrray of 2 sub arrays. 1 of those Arrays are all truthy values, while the other are all falsy values. All nested within one array.
- * @param:{array}
- * @return:{[truthyArr, falsyArr]}: returns a new array containing the falsy values and truthy values.
+ * @param:{Array} array: array that is being looped through
+ * @return:{[TruthyArr, FalsyArr]}: returns a new array containing the falsy values and truthy values.
  **/
  
   function partition(array, funct){
@@ -213,9 +213,9 @@ module.exports.partition = partition;
 
  /**
  * map: puts the results of the called function, with every element, i, & collection  into a new array.
- * @param: {collection}
- * @param: {funct}
- * @return:{arr}: returns a new array containing result of the modified array.
+ @param:{Collection} collection: an object or an array
+ @param:{Funct} function: a set of statements that performs a task
+ * @return:{Arr}: returns a new array containing result of the modified array.
  **/
  
 function map(collection, funct){
@@ -230,9 +230,9 @@ module.exports.map = map;
 
  /**
  * pluck: Returns an array with the value of all properties
- * @param: {collection}
- * @param: {property}
- * @return: {result}: returns an array with the value of all properties
+ * @param: {Collection} collection: an object or an array
+ * @param: {Property}: association between a key and a value
+ * @return: {Result}: returns an array with the value of all properties
  **/
  
  function pluck(collection, property){
@@ -246,9 +246,9 @@ module.exports.pluck = pluck;
 
  /**
 * every: Designed to return a boolean based on the callback function
-* @param: {collection}
-* @param: {funct}
-* @return: {bool}: returns a boolean
+* @param: {Collection} collection: an object or an array
+* @param: {Funct} function: a set of statements that performs a task
+* @return: {Bool}: returns a boolean
  **/
  
  function every(collection, funct){
@@ -273,9 +273,9 @@ module.exports.every = every;
 
 /** some: Checks whether the return value from calling (function) is true or false.
           And if no function is given determine if the element is true of not.
-* @param: {collection}
-* @param: {funct}
-* @return: {bool}
+* @param: {Collection} collection: an object or an array
+* @param: {Funct} function: a set of statements that performs a task
+* @return: {Bool}
 **/
  function some(collection, funct){
    var bool = false;
@@ -301,9 +301,9 @@ module.exports.some = some;
 
 /** reduce: Test a provided function for each value of the array. 
             Then the return value of the function is stored in an accumulator (result/total). 
-@param: {array}
-@param: {funct}
-@param: {seed}
+@param:{Array} array: array that is being looped through
+ @param:{Funct} funct: function: a set of statements that performs a task
+@param: {seed} seed: Accumalator
 @return: {seed} returns a number that is represented as a seed
 **/
 
@@ -323,8 +323,8 @@ module.exports.some = some;
 module.exports.reduce = reduce;
 
 /**extend: copy properties between objects.
-@param: {object}
-@param: {...moreObjects}
+@param: {Object} object: object that is being looped through
+@param: {...MoreObjects}: spread array into different arguments
 @return: {object}: returns a new object that contains the new properties
 **/
 
