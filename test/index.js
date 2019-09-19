@@ -1,8 +1,3 @@
- /**
- indentity: function that always returns the same value that was used as its argument.
-@param {value} value: 
-return: {any datatype}: returns the value that's being passed;
- **/
 function identity(value){
     return value;
 }
@@ -29,9 +24,8 @@ if (Array.isArray(value)){
     }
 }
     module.exports.typeOf = typeOf();
-
- 
- /**
+    
+/**
  first: Designed to return the first number of elements in an array
     With edge case to test if an aray is an array.
 @param: {Number} number: number of elements
@@ -72,7 +66,6 @@ if (Array.isArray(value)){
         return array[array.length-1];
     } else if ( number >= array.length){
         return array;
-        
     } else if (number < 0) {
         return arr;
         
@@ -100,10 +93,9 @@ function indexOf(array, value){
         return i;
         }
 } return -1;
-};
-     module.exports.each = each;
-     
-     
+}
+     module.exports.each = indexOf;
+  
   /**
   contains: Designed to test if an array holds a value using a contenary operator.
             Uses the includes method to test if array includes value. 
@@ -140,8 +132,7 @@ function each(collection, funct){
 }
 module.exports.each = each;
 
-
-  /**
+/**
   unique: Returns a new array of all elements from {array} with duplicates removed using indexOf.
   @param:{Array} array: array that is being looped through
   @return:{Array} array: Retruns an array of new values..
@@ -177,7 +168,7 @@ module.exports.unique = unique;
 }
 module.exports.filter = filter;
 
- /**
+/**
  reject: Designed to run through an array and filter out all falsy values depending on callback
  @param:{Array} array: array that is being looped through
  @param:{Funct} funct: function: a set of statements that performs a task
@@ -215,8 +206,7 @@ else truthArr.push(ele);
 }
 module.exports.partition = partition;
 
-
- /**
+/**
  * map: puts the results of the called function, with every element, i, & collection  into a new array.
  @param:{Collection} collection: an object or an array
  @param:{Funct} function: a set of statements that performs a task
@@ -248,8 +238,7 @@ module.exports.map = map;
 }
 module.exports.pluck = pluck;
 
-
- /**
+/**
 * every: Designed to return a boolean based on the callback function
 * @param: {Collection} collection: an object or an array
 * @param: {Funct} function: a set of statements that performs a task
@@ -274,7 +263,6 @@ module.exports.pluck = pluck;
    return bool;
 }
 module.exports.every = every;
-
 
 /** some: Checks whether the return value from calling (function) is true or false.
           And if no function is given determine if the element is true of not.
